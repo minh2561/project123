@@ -13,6 +13,7 @@
         }
     }
 ?>
+
     <div class="img_back">
     <?php
              if(isset($_SESSION['add']))
@@ -43,9 +44,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-        <span>Học kì : <?php echo $trang_thai ?></span>
-        <button class="btn" ><a href="trangThai.php?trang_thai=<?php echo $trang_thai ?>">Đóng/Mở</a></button>
+        <li class="nav-item bt-group">
+        <span><button class="btn btn-danger disabled" >Học kì: <?php echo $trang_thai ?></button></span>
+        <button class="btn btn-outline-danger" ><a href="trangThai.php?trang_thai=<?php echo $trang_thai ?>">Đóng/Mở</a></button>
         </li>
       </ul>
       <form class="d-flex navbar-nav mb-7 mb-lg-0">
@@ -67,7 +68,7 @@
                             <th scope="col">                           
                                 <div class="container_swap">
                                     <div class="div_left">Môn học </div>
-                                    <!-- <div class="div_right"><a href="./class/addClass.php"><i class="bi bi-clipboard-plus"></i></a></div> -->
+                                    <div class="div_right"><a href="./class/addClass.php"><i class="bi bi-clipboard-plus"></i></a></div>
                                 </div>
                             </th>
                         </tr>
@@ -81,8 +82,8 @@
                         ?>
                         <tr>
                            <th scope="row"><button type="button" class="btn btn-danger" onclick="handleDetails('<?php echo $row['mh_id'] ?>')"><?php echo $row['mh_ten_mon'] ?></button>
-                           <!-- <div class="div_right"><a href="subject/updateSubject.php?mh_id=<?php echo $row['mh_id'] ?>"><i class="fas fa-pencil-alt"></i></a></div>
-                           <div class="div_right"><a href="subject/deleteSubject.php?mh_id=<?php echo $row['mh_id'] ?>"><i class="fas fa-eraser"></i></a></div> -->
+                           <div class="div_right"><a href="subject/updateSubject.php?mh_id=<?php echo $row['mh_id'] ?>"><i class="fas fa-pencil-alt"></i></a></div>
+                           <div class="div_right"><a href="subject/deleteSubject.php?mh_id=<?php echo $row['mh_id'] ?>"><i class="fas fa-eraser"></i></a></div>
                        </tr>
                     <?php }
                 }

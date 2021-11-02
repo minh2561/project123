@@ -1,8 +1,9 @@
 <?php
-include '../index/header.php';
+include '../index_sv/header.php';
 
 include 'check_login_gv.php';
 ?>
+<div class="back_sv">
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
     <div class="container-fluid">
 
@@ -12,21 +13,22 @@ include 'check_login_gv.php';
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item ">
-                    <!-- <a class="nav-link" href="index.php"><i class="far fa-calendar-alt me-1"></i>Môn học</a> -->
+                    <a class="nav-link" href="index.php"><i class="far fa-calendar-alt me-1"></i>Môn học</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../index/logout.php"><i class="fas fa-sign-out-alt me-1"></i>Đăng xuất</a>
                 </li>
             </ul>
-            <form class="d-flex navbar-nav mb-7 mb-lg-0">
-                <a class="nav-link" href="../index/logout.php"><i class="fas fa-sign-out-alt me-1"></i>Đăng xuất</a>
-            </form>
+
         </div>
     </div>
 </nav>
-<div class="main-content bg-light back_sv">
+<div class="main-content bg-light">
     <div class="container">
     <h3 class="text-center py-4">Môn được phân công</h3>
     <div class="bang_monhoc">
     <table class="table">
-        <thead class = "bg-primary_sv">
+        <thead class = "bg-primary">
         <tr>
             <th scope="col">STT</th>
             <th scope="col">Tên học phần</th>
@@ -85,6 +87,7 @@ $(document).ready(async function(){
 
 </script>
 <?php
-// include '../index/footer.php';
+include '../index_sv/footer.php';
 ?>
-<div class="end_sv"></div>
+</div>
+<!-- <div class="end"></div> -->

@@ -35,7 +35,7 @@
     
 ?>
 
-
+<div class="back_sv">
 <form action="" method="POST" class="container">
     <div class="form-group header_addClass">
         <label for="lop_ten_phong">Lớp tên học phần</label>
@@ -126,5 +126,5 @@
 </form>
 
 
-
+</div>
 <?php include('../../index/footer.php')?>

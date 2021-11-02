@@ -1,6 +1,7 @@
 <?php
-include('../index/header.php');
+include('../index_sv/header.php');
 ?>
+<div class="back_sv">
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
     <div class="container-fluid">
 
@@ -24,7 +25,7 @@ include('../index/header.php');
         </div>
     </div>
 </nav>
-<div class="main-content bg-light back_sv">
+<div class="main-content bg-light ">
     <div class="container">
         <?php
         if (isset($_SESSION['delete'])) {
@@ -39,9 +40,9 @@ include('../index/header.php');
         <h3 class="text-center py-4">Các môn đã đăng kí</h3>
      
        
-
-        <table class="table" style="background-color:white; ">
-            <thead class="bg-primary_sv "style ="color:red;">
+        <div class="bang_monhoc">
+        <table class="table">
+            <thead class="bg-primary_sv">
                 <tr>
                     <th scope="col">STT</th>
                     <th scope="col">Tên học phần</th>
@@ -50,7 +51,7 @@ include('../index/header.php');
                     <th scope="col">Số sinh viên</th>
                     <th scope="col">Tên phòng</th>
                     <th scope="col">Tuần học</th>
-                    <th scope="col">Giờ học</th>
+                    <th scope="col">Gio học</th>
                     <th scope="col">Trạng thái đăng kí</th>
                     <th scope="col">Đăng kí</th>
                     <th scope="col">Hủy đăng kí</th>
@@ -89,11 +90,11 @@ include('../index/header.php');
 
 
         </table>
-
+        </div>
     </div>
 </div>
 <?php
-include('../index/footer.php');
+include('../index_sv/footer.php');
 ?>
 <script>
     var search;
@@ -110,8 +111,8 @@ include('../index/footer.php');
 </script>
 </table>
 </div>
-
 </div>
-<div class="end_sv"></div>
+</div>
+<!-- <div class="end_sv"></div> -->
 
 

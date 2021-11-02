@@ -1,5 +1,6 @@
-<?php include('../index/header.php') ?>
-<div class="table-responsive container">
+<?php include('../index_sv/header.php') ?>
+<div class="back_sv">
+<div class="table-responsive container ">
 <button class="btn btn-danger"><a href="index.php" >Quay lai </a></button>
     <table class="table">
         <tr>
@@ -61,7 +62,7 @@
                 <?php echo $lop_trang_thai_dang_ki; ?>
             </td>
             <td>
-                <a href="addSubject.php?lop_id=<?php echo $lop_id ?>&sv_id=<?php echo $sv_id ?>" class="btn btn-primary">Đăng kí</a>
+                <a href="addSubject.php?lop_id=<?php echo $lop_id ?>&sv_id=<?php echo $sv_id ?>" class="btn btn-danger">Đăng kí</a>
             </td>
             
         </tr>
@@ -73,6 +74,6 @@
      }
      ?>
     </table>
-        
     </div>
-<?php include('../index/footer.php') ?>
+    </div>
+<?php include('../index_sv/footer.php') ?>

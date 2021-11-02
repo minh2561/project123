@@ -1,10 +1,10 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+/* @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css); */
 
 
 .back{
     width: 100%;
     height: 100vh;
-    background-image:url(../../images/background.jpg);
+    background-image:url(../images/background.jpg);
     margin-top: 0px;
 }
 .dangki>h2{
@@ -63,13 +63,13 @@
 }
 a{
     text-decoration: none;
-    color: unset;
+    color: unset !important;
 }
 a:hover{
     color: unset;
 }
 .img_back{
-    background-image: url(../../images/back_1.jpg);
+    background-image: url(../images/back_1.jpg);
     width: auto;
     height: 100%;
     box-sizing: border-box;
@@ -97,17 +97,17 @@ a:hover{
     font-size: 30px;
     font-style: italic;
     font-weight: bolder;
-    background-image: url(../../images/van_go.jpg);
+    background-image: url(../images/van_go.jpg);
 }
 .row {
     --bs-gutter-x: unset;
     width: 100%;
-    display:table;
+    /* display:table; */
 }
 .end{
     width: 100%;
     float: left;
-    background: url('../../images/footer.jpg') no-repeat top;
+    background: url('../images/footer.jpg') no-repeat top;
     height: 100px;
     bottom: 0px;
 }
@@ -151,7 +151,10 @@ form.d-flex {
     list-style-type: none;
 }
 
-
+.d-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 
 
@@ -175,14 +178,17 @@ form.d-flex {
     float: right;   
     text-align: center;
 }    
-
-
+button.btn.btn-danger {
+    margin: 10px;
+}
+a.btn.btn-danger {
+    color: white !important;
+}
 
 
 .back_sv{
     background-image: url(../../images/back_1.jpg);
-    height: auto;
-    width: 100%;
+    height: 100vh;
     box-sizing: border-box;
     overflow-x: auto;
 }
@@ -192,18 +198,20 @@ form.d-flex {
     background: url('../../images/footer.jpg') no-repeat top;
     height: 100px;
     bottom: 0px;
-    /* position: absolute; */
+    position: absolute;
 }
 .bg-primary_sv{
     background-color: white;
-    height: 100%;
+    width: 100%;
 }
 .navbar-light .navbar-toggler {
     color: rgba(0,0,0,.55);
     border-color: #b02a37;
 }
 
-
+.lophocphan {
+    margin-left:auto;
+}
 
 .navbar-light .navbar-nav .nav-link {
     color: white;
@@ -213,12 +221,22 @@ form.d-flex {
 .bg-danger {
     background-color: white! important;
 }
+.main-content.bg-light {
+    background-color: unset !important;
+}
 
 
 
 
 
 
+.img-responsive{
+    width: 100%;
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
 .logo{
     width: 20%;
     float: left;
@@ -336,11 +354,6 @@ form.container {
     margin-top: 30px;
 }
 
-/* .table_sv{
-    width: 100%;
-    height: 100%;
-    overflow-x: auto;
-} */
 
 
 
@@ -356,6 +369,25 @@ form.container {
 
 
 
+
+.minh {
+	font-size: 10vw;
+	color: #03a9f4;
+	margin: 30px;
+}
+
+.z-text {
+	transform: rotateX(30deg) rotateY(-30deg);
+	transition: transform 1s;
+}
+
+[data-z]:hover .z-text {
+	transform: rotateX(-30deg) rotateY(30deg);
+}
+
+.z-layer:not(:first-child) {
+	color: #027fb7;
+}
 
 
 
@@ -382,7 +414,10 @@ nav.mb-4.navbar.navbar-expand-lg.navbar-light.pink.lighten-4 {
 }
 
 
-
+.table thead th {
+    vertical-align: middle !important;
+    border-bottom: 2px solid #dee2e6;
+}
 
 
 
@@ -402,11 +437,12 @@ a.text-primary.ms-2.text-center {
 .col-sm-2.bg-primary_sv {
     padding-right: unset;
     padding-left: unset;
-    font-size: 120px;
+
 }
 .main-content .bg-light{
     overflow-x: auto;
 }
-.d-flex.main-content.back_sv {
-    display: -webkit-box!important;
+.giaovien{
+    width: 100%;
+    overflow-x: auto;
 }

@@ -15,23 +15,31 @@ $mh_id = $_GET['mh_id'];
     }
     
 ?>
+<div class="back_sv">
 <form action="" method="POST" class="container">
-    <div class="form-group">
-        <label for="mh_ten_mon">mh_ten_mon</label>
-        <input type="text" value="<?php echo $mh_ten_mon ?>" class="form-control" name="mh_ten_mon" id="mh_ten_mon" placeholder="lop_max_sv">
+    <div class="form-group header_addClass">
+        <label for="mh_ten_mon">Tên môn học</label>
+        <input type="text" value="<?php echo $mh_ten_mon ?>" class="form-control" name="mh_ten_mon" id="mh_ten_mon" placeholder="Tên môn học">
     </div>
     <div class="form-group">
-        <label for="mh_thoi_gian_hoc">mh_thoi_gian_hoc </label>
-        <input type="text" value="<?php echo $mh_thoi_gian_hoc ?>" class="form-control" name="mh_thoi_gian_hoc" id="mh_thoi_gian_hoc" placeholder="lop_current_sv">
+        <label for="mh_thoi_gian_hoc">Thời gian học</label>
+        <input type="text" value="<?php echo $mh_thoi_gian_hoc ?>" class="form-control" name="mh_thoi_gian_hoc" id="mh_thoi_gian_hoc" placeholder="Thời gian học">
     </div>
-    <div class="custom-control custom-radio">
-        <input type="submit" name="submit" value="update Class" class="btn-secondary">
+    <!-- <div class="custom-control custom-radio">
+        <input type="submit" name="submit" value="update Class" class="btn btn-danger">
     </div>
  
     <div>
-        <a href="<?php echo SITEURL ?>admin"> Quay lai</a>
-</div>
-
+        <a href="<?php echo SITEURL ?>admin">Quay lại</a>
+</div> -->
+    <div class="btn-group">
+        <div class="custom-control custom-radio them">
+        <input type="submit" name="submit" value="Update Class" class="btn btn-danger">
+        </div>
+    
+        <div>
+        <button type="button" class="btn btn-outline-danger them"> <a href="<?php echo SITEURL ?>admin">Quay lại</a></button>
+    </div>
 <?php 
    
     if(isset($_POST['submit']))
@@ -55,5 +63,5 @@ $mh_id = $_GET['mh_id'];
     }
     
 ?>
-
-<?php include('../../index/footer.php')?>
+</div>
+<?php include('../footer.php')?>
