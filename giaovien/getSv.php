@@ -4,7 +4,7 @@
 
 
 <?php
-include '../index/header.php';
+include '../index_sv/header.php';
 include 'check_login_gv.php';
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
@@ -36,8 +36,8 @@ include 'check_login_gv.php';
         <tr>
             <th scope="col">STT</th>
             <th scope="col">Email</th>
-            <th scope="col">Ten sinh viên</th>
-            <th scope="col">Lop</th> 
+            <th scope="col">Tên sinh viên</th>
+            <th scope="col">Lớp</th> 
         </tr>
         </thead>
         <?php
@@ -64,11 +64,11 @@ include 'check_login_gv.php';
 
         
     </table>
-    <button class="bg-primary"><a href="index.php" class="">Quay lai</a></button>
+    <button class="btn btn-danger"><a href="index.php" class="">Quay lại</a></button>
 
 </div>
 </div>
-<div class="end"></div>
+<!-- <div class="end"></div> -->
 <?php
 include '../index/footer.php'
 ?>
