@@ -37,7 +37,7 @@ include 'check_login_gv.php';
             <th scope="col">Tên phòng</th>
             <th scope="col">Tuần học</th>
             <th scope="col">Giờ học</th>
-            <th scope="col">Danh sach Sv</th>   
+            <th scope="col">Danh sách SV</th>   
         </tr>
         </thead>
         <?php
