@@ -1,12 +1,8 @@
-
-
-
-
-
 <?php
 include '../index_sv/header.php';
 include 'check_login_gv.php';
 ?>
+<div class="back_sv">
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
     <div class="container-fluid">
 
@@ -26,7 +22,7 @@ include 'check_login_gv.php';
         </div>
     </div>
 </nav>
-<div class="main-content bg-light" style="min-height: 500px;">
+<div class="main-content bg-light">
     <div class="container">
    
      <h3 class="text-center py-4">Danh sách sinh viên</h3>
@@ -65,7 +61,7 @@ include 'check_login_gv.php';
         
     </table>
     <button class="btn btn-danger"><a href="index.php" class="">Quay lại</a></button>
-
+    </div>
 </div>
 </div>
 <!-- <div class="end"></div> -->
