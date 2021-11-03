@@ -1,9 +1,8 @@
 <?php
-include '../index_sv/header.php';
+include '../index/header.php';
 
 include 'check_login_gv.php';
 ?>
-<div class="back_sv">
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
     <div class="container-fluid">
 
@@ -15,20 +14,18 @@ include 'check_login_gv.php';
                 <li class="nav-item ">
                     <a class="nav-link" href="index.php"><i class="far fa-calendar-alt me-1"></i>Môn học</a>
                 </li>
-<!--                 <li class="nav-item ">
+                <li class="nav-item ">
                     <a class="nav-link" href="../index/logout.php"><i class="fas fa-sign-out-alt me-1"></i>Đăng xuất</a>
-                </li> -->
+                </li>
             </ul>
-            <form class="d-flex">
-                <a class="nav-link" href="../index/logout.php"><i class="fas fa-sign-out-alt me-1"></i>Đăng xuất</a>
-            </form>
+
         </div>
     </div>
 </nav>
-<div class="main-content bg-light">
+<div class="main-content bg-light" style="height: 500px;">
     <div class="container">
     <h3 class="text-center py-4">Môn được phân công</h3>
-    <div class="bang_monhoc">
+    
     <table class="table">
         <thead class = "bg-primary">
         <tr>
@@ -39,7 +36,7 @@ include 'check_login_gv.php';
             <th scope="col">Tên phòng</th>
             <th scope="col">Tuần học</th>
             <th scope="col">Giờ học</th>
-            <th scope="col">Danh sách SV</th>   
+            <th scope="col">Danh sach Sv</th>   
         </tr>
         </thead>
         <?php
@@ -71,7 +68,7 @@ include 'check_login_gv.php';
 
         
     </table>
-    </div>
+    
 </div>
 </div>
 
@@ -89,7 +86,6 @@ $(document).ready(async function(){
 
 </script>
 <?php
-include '../index_sv/footer.php';
+include '../index/footer.php';
 ?>
-</div>
-<!-- <div class="end"></div> -->
+<div class="end"></div>

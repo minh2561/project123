@@ -1,27 +1,26 @@
 <?php
-include('../index_sv/header.php');
+include('../index/header.php');
 include('check_login_sv.php');
 $sv_id=$_SESSION['sinh_vien'];
+$checkTrangThai = '';
 $sql7 = "SELECT DISTINCT * FROM admin";
 $result7 = mysqli_query($conn, $sql7);
 if (mysqli_num_rows($result7) > 0) {
     $row = mysqli_fetch_assoc($result7);
-    $_SESSION['trang_thai'] = $row['trang_thai'];
+    $checkTrangThai = $row['trang_thai'];
 }
+
 ?>
 
-<div class="back_sv">
 <div class="tuychon">
 <nav class="mb-4 px-5 navbar navbar-expand-lg navbar-light pink lighten-4">
         <div class="logo">
-                <a href="index.php" title="Logo">
+                <a href="#" title="Logo">
                     <img src="../images/log.png" alt="Restaurant Logo" class="img-responsive">
                 </a>
         </div>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto" style="margin:0 auto">
             <li class="nav-item ms-5">
@@ -36,12 +35,12 @@ if (mysqli_num_rows($result7) > 0) {
         </ul>
         <form class="form-inline md-form mb-0" >
         <!-- <i class="fas fa-search"></i> -->
-            <input <?php if ($_SESSION['trang_thai'] == 'Đóng') {
+            <input <?php if ($checkTrangThai == 'Đóng') {
                         echo 'disabled';
                     }; ?> class="form-control font-bold " type="text" placeholder="Search" aria-label="Search" onchange="handleGetName(this.value)" aria-label="Search">
-                <button <?php if ($_SESSION['trang_thai'] == 'Đóng') {
+                <button <?php if ($checkTrangThai == 'Đóng') {
                             echo 'disabled';
-                        } ?> class="btn btn-danger" id="btnSearch"><a id="hrefSearch">Tìm Kiếm</a></button>
+                        } ?> class="btn btn-primary" id="btnSearch"><a id="hrefSearch">Tìm Kiếm </a></button>
                 
     </form>
     </div>
@@ -67,11 +66,11 @@ if (mysqli_num_rows($result7) > 0) {
         }
         ?>
 
-        <?php if ($_SESSION['trang_thai'] == 'Đóng') {
+        <?php if ($checkTrangThai == 'Đóng') {
             echo '<h6>Trạng thái đăng kí học đã hết hạn</h6>';
         } ?>
     </div>
-    <div class="d-flex main-content">
+    <div class="d-flex main-content back_sv">
         <div class="col-sm-2 bg-primary_sv ">
             <table class="table table-hover">
                 <thead>
@@ -87,7 +86,7 @@ if (mysqli_num_rows($result7) > 0) {
                         while ($row = mysqli_fetch_assoc($res)) {
                             ?>
                             <tr>
-                            <th scope="row"><a type="button" class="btn btn-danger" onclick="handleDetails('<?php echo $row['mh_id'] ?>')"><?php echo $row['mh_ten_mon'] ?></a>
+                            <th scope="row"><button type="button" class="btn btn-danger" onclick="handleDetails('<?php echo $row['mh_id'] ?>')"><?php echo $row['mh_ten_mon'] ?></button>
                             </tr>  
                        <?php }
                     }
@@ -97,15 +96,15 @@ if (mysqli_num_rows($result7) > 0) {
         </div>
         <div class="col-sm-10 ">
             <h5 class="text-center my-3">Lớp học phần</h5>
-            <!-- <div class="container"> -->
-            <div class="bang_monhoc">
+            <div class="container">
                 <table class="table table-hover" id="tableSubject">
                     <thead class="bg-primary_sv ">
                         <tr>
+                            <th scope="col">STT</th>
                             <th scope="col">Tên học phần</th>
                             <th scope="col">Trạng thái</th>
                             <th scope="col">Tổng sinh viên</th>
-                            <th scope="col">Số sinh viên đã ĐK</th>
+                            <th scope="col">Số sinh viên</th>
                             <th scope="col">Tên phòng</th>
                             <th scope="col">Tuần học</th>
                             <th scope="col">Giờ học</th>
@@ -113,17 +112,16 @@ if (mysqli_num_rows($result7) > 0) {
                         </tr>
                     </thead>
                     <tbody>
-
-                    </tbody>
+                </tbody>
                 </table>
             </div>
         </div>
     </div>
-    </div>
+
 </div>
-<!-- <div class="end_sv"></div> -->
+<div class="end_sv"></div>
 <?php
-    include('../index_sv/footer.php');
+    include('../index/footer.php');
 ?>
 <script>
     var search;
@@ -159,7 +157,7 @@ if (mysqli_num_rows($result7) > 0) {
         $.each(data.users,function(i,data){
         $("#tableSubject > tbody").append(`
     <tr>
-        
+        <td>${++i}</td>
         <td>${data.lop_ten_hoc_phan	} </td>
         <td>${data.lop_trang_thai	} </td>
         <td>${data.lop_max_sv} </td>
@@ -167,7 +165,7 @@ if (mysqli_num_rows($result7) > 0) {
         <td>${data.lop_ten_phong} </td>
         <td>${data.lop_tuan_hoc} </td>
         <td>${data.lop_gio_hoc	} </td>
-        <td ><a  style="color:red" href="addSubject.php?lop_id=${data.lop_id}&sv_id=<?php echo $sv_id ?>">Đăng kí</a></td>
+        <td ><a style="color:red" href="addSubject.php?lop_id=${data.lop_id}&sv_id=<?php echo $sv_id ?>">Đăng kí</a></td>
     </tr>
     `)  
     })        
